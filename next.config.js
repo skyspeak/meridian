@@ -5,6 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  basePath: process.env.NODE_ENV === 'production' ? '/meridian' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/meridian' : '',
 }
 
 module.exports = nextConfig 
