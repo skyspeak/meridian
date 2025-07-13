@@ -1,5 +1,5 @@
 import React from 'react'
-import { XMarkIcon, HomeIcon, DocumentTextIcon, UserGroupIcon, ChartBarIcon, CogIcon, Bars3Icon, ChatBubbleLeftRightIcon } from '@heroicons/react/24/outline'
+import { XMarkIcon, HomeIcon, DocumentTextIcon, UserGroupIcon, ChartBarIcon, CogIcon, Bars3Icon, ChatBubbleLeftRightIcon, SparklesIcon } from '@heroicons/react/24/outline'
 import { useRouter, usePathname } from 'next/navigation'
 
 interface SidebarProps {
@@ -12,6 +12,7 @@ interface SidebarProps {
 const navigation = [
   { name: 'Dashboard', href: '/', icon: HomeIcon },
   { name: 'Projects', href: '/projects', icon: DocumentTextIcon },
+  { name: 'Roadmap Builder', href: '/roadmap', icon: SparklesIcon },
   { name: 'Test', href: '/test', icon: DocumentTextIcon },
   { name: 'Monitoring', href: '/monitoring', icon: ChatBubbleLeftRightIcon },
   { name: 'Users', href: '/users', icon: UserGroupIcon },

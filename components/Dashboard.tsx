@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { PlusIcon, EyeIcon, PencilIcon } from '@heroicons/react/24/outline'
+import { PlusIcon, EyeIcon, PencilIcon, SparklesIcon } from '@heroicons/react/24/outline'
 import { projectStore } from '../lib/store'
 import { Project, ProjectStage } from '../types'
 import StatsCard from './StatsCard'
@@ -84,6 +84,32 @@ export default function Dashboard() {
           changeType="increase"
           icon="CheckCircleIcon"
         />
+      </div>
+
+      {/* Roadmap Builder Quick Access */}
+      <div className="mb-8">
+        <div className="card bg-gradient-to-r from-primary-50 to-blue-50 border-primary-200">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <div className="flex-shrink-0">
+                <SparklesIcon className="h-10 w-10 text-primary-600" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900">AI Roadmap Builder</h3>
+                <p className="text-sm text-gray-600">
+                  Generate comprehensive project plans with gates, checkpoints, and resource recommendations
+                </p>
+              </div>
+            </div>
+            <a
+              href="/roadmap"
+              className="btn-primary flex items-center space-x-2"
+            >
+              <SparklesIcon className="h-5 w-5" />
+              <span>Build Roadmap</span>
+            </a>
+          </div>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
